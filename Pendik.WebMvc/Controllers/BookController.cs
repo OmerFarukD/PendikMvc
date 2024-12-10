@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pendik.WebMvc.Data;
 using Pendik.WebMvc.Models;
+using System.Net;
 
 namespace Pendik.WebMvc.Controllers
 {
@@ -38,5 +39,14 @@ namespace Pendik.WebMvc.Controllers
         }
 
 
+
+     
+        public IActionResult Delete(int id)
+        {
+            var book = BookData.Books.FirstOrDefault(x => x.Id == id);
+            BookData.Books.Remove(book);
+
+            return RedirectToAction("Index","Book");
+        }
     }
 }
