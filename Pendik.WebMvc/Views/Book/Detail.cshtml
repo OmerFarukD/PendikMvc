@@ -1,0 +1,11 @@
+﻿@model Book
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><strong>Kitap Başlığı : </strong>@Model.Title</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Kitap Fiyatı : </strong>@Model.Price</h6>
+        <p class="card-text"><strong>Kitap Açıklaması : </strong> @Model.Description</p>
+        <a  class="card-link btn btn-outline-success">Sil</a>
+        <a class="card-link btn btn-outline-warning">Güncelle</a>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿@model List<User>
+<table class="table table-primary table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Age</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr class="table-success">
+                <th scope="row">@item.Age</th>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+

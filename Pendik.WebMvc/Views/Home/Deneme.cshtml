@@ -1,0 +1,32 @@
+﻿@{
+    List<string> meyveler = new List<string>()
+    {
+    "Armut","Kiraz","Üzüm","(Malatya)Kayısısı","Portakal"
+    };
+
+    User? user = ViewData["user"] as User;
+}
+
+<div>
+    <h2> Meyveler </h2>
+    <ul class="list-group">
+
+        @foreach (var item in meyveler)
+        {
+            <li class="list-group-item">@item</li>
+        }
+    </ul>
+</div>
+
+<p>Deneme: @ViewBag.Value1</p>
+<p>Deneme: @ViewBag.Value2</p>
+
+
+
+
+
+
+
+
+
+

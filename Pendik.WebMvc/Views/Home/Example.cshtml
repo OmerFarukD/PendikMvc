@@ -1,0 +1,20 @@
+﻿@{
+    User user = ViewData["user"] as User;
+}
+
+
+<div class="card text-center">
+    <div class="card-header">
+        <strong>Kişinin Adı: </strong>@user.Name
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"><strong>Kişinin Kullanıcı Adı:</strong> @user.Surname</h5>
+        <p class="card-text"> <strong>Kişinin Yaşı:</strong>@user.Age</p>
+
+        <p class="card-text"> <strong>Kişinin Emaili:</strong>@ViewBag.Email</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+        2 days ago
+    </div>
+</div>
