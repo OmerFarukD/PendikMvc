@@ -38,9 +38,6 @@ namespace Pendik.WebMvc.Controllers
             return View(book);
         }
 
-
-
-     
         public IActionResult Delete(int id)
         {
             var book = BookData.Books.FirstOrDefault(x => x.Id == id);

@@ -1,0 +1,15 @@
+﻿@model CategoryUpdateRequestDto
+
+<form asp-controller="Categories" asp-action="Update" method="post">
+      <div class="mb-3">
+            <label asp-for="Id" class="form-label">Id</label>
+            <input asp-for="Id" type="number" class="form-control" disabled="disabled">
+        </div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Kategori Adı</label>
+        <input asp-for="Name" type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-outline-success">Güncelle</button>
+    <button type="reset" class="btn btn-outline-info">Resetle</button>
+    <button type="reset" class="btn btn-outline-secondary">Kategorilere git</button>
+</form>

@@ -1,0 +1,11 @@
+﻿@model CategoryAddRequestDto
+
+<form asp-controller="Categories" asp-action="Create" method="post" >
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Kategori Adı</label>
+        <input asp-for="Name" type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-outline-success">Ekle</button>
+    <button type="reset" class="btn btn-outline-info">Resetle</button>
+    <button type="reset" class="btn btn-outline-secondary">Kategorilere git</button>
+</form>

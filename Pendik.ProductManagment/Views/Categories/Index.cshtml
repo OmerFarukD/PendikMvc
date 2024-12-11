@@ -1,0 +1,24 @@
+﻿@model List<CategoryResponseDto>
+<a  asp-action="Create" asp-controller="Categories" class="btn btn-outline-success" style="margin-bottom: 30px">Ekle</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Kategori Adı</th>
+        <th scope="col">Silme</th>
+        <th scope="col">Güncelleme</th>
+    </tr>
+    </thead>
+    <tbody>
+   
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.Name</td>
+            <td><a asp-controller="Categories" asp-action="Delete" asp-route-id="@item.Id">Sil</a></td>
+            <td><a asp-controller="Categories" asp-action="Update" asp-route-id="@item.Id">Güncelle</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
