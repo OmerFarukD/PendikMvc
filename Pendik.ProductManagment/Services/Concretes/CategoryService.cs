@@ -45,6 +45,13 @@ public sealed class CategoryService(IMapper _mapper, ICategoryRepository _catego
         var category = _categoryRepository.GetById(id);
         _categoryRepository.Delete(category);
     }
-    
-    
+
+    public CategoryUpdateRequestDto GetByIdForUpdateRequest(int id)
+    {
+        var category = _categoryRepository.GetById(id);
+
+        var request = _mapper.Map<CategoryUpdateRequestDto>(category);
+
+        return request;
+    }
 }

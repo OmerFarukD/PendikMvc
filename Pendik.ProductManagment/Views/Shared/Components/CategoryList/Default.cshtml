@@ -1,0 +1,14 @@
+﻿@model List<CategoryResponseDto>
+
+<ul class="list-group">
+    
+    
+    <li class="list-group-item"><a asp-controller="Products" asp-action="Index">Tüm Ürünleri Göster</a></li>
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item"><a asp-controller="Products"
+                                       asp-action="GetAllByCategoryId"
+                                       asp-route-categoryId="@item.Id"
+                                       >@item.Name</a></li>
+    }
+</ul>

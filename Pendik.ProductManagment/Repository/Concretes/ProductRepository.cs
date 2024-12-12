@@ -67,6 +67,7 @@ public sealed class ProductRepository(BaseDbContext _context) : IProductReposito
         return _context.Products
             .AsNoTracking()
             .Where(x => x.IsOnSale == itIsOnSale)
+            .Include(x=>x.Category)
             .ToList();
     }
 

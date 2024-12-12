@@ -74,4 +74,13 @@ public class ProductService(IProductRepository _productRepository, IMapper _mapp
         var response = _mapper.Map<List<ProductResponseDto>>(products);
         return response;
     }
+
+    public ProductUpdateRequestDto GetByIdForUpdateRequest(int id)
+    {
+        Product? product = _productRepository.GetById(id);
+
+        var request = _mapper.Map<ProductUpdateRequestDto>(product);
+
+        return request;
+    }
 }

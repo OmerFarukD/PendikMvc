@@ -1,5 +1,4 @@
-﻿
-@model ProductResponseViewModel
+﻿@model ProductResponseViewModel
 <a asp-controller="Products" asp-action="Create" class="btn btn-outline-success" style="margin-bottom: 30px">Ekle</a>
 <div class="row">
     <div class="col-md-3">
@@ -8,13 +7,11 @@
     <div class="col-md-9">
         <vc:product-table products="Model.Products"></vc:product-table>
     </div>
-    
-    <div class="alert alert-primary" role="alert">
+</div>
+
+  <div class="alert alert-primary" role="alert">
         <p><strong> Toplam Ürün sayısı:</strong>@Model.Count</p>
         <p><strong> En Pahalı Ürün:</strong>@Model.MostExpensiveProduct</p>
         <p><strong> En Ucuz Ürün:</strong>@Model.CheapestProduct</p>
         <p><strong> Bu Sayfadaki Ürünlerin Toplam Fiyatı:</strong>@Model.Total</p>
     </div>
-  
-</div>
-

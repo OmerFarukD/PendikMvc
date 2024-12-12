@@ -1,0 +1,19 @@
+﻿@model ProductResponseDto
+
+@if (Model.Price > 1000  && Model.Price<=5000)
+{
+    <td><span class="badge rounded-pill bg-success">@Model.Price</span></td>
+}else if(Model.Price > 5000 && Model.Price<=10000)
+{
+    <td><span class="badge rounded-pill bg-primary">@Model.Price</span></td>
+}else if (Model.Price>10000 && Model.Price<=20000)
+{
+    <td><span class="badge rounded-pill bg-danger">@Model.Price</span></td>
+}else if (Model.Price>20000)
+{
+    <td><span class="badge rounded-pill bg-info text-dark">@Model.Price</span></td>
+}
+else
+{
+    <td><span class="badge rounded-pill bg-secondary">@Model.Price</span></td>
+}

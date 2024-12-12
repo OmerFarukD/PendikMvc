@@ -9,4 +9,6 @@ public interface ICategoryService
     CategoryResponseDto Update(CategoryUpdateRequestDto dto);
     CategoryResponseDto Add(CategoryAddRequestDto dto);
     void Delete(int id);
+    
+    CategoryUpdateRequestDto GetByIdForUpdateRequest(int id);
 }

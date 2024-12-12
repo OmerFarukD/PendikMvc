@@ -13,4 +13,6 @@ public interface IProductService
     List<ProductResponseDto> GetAllProductsByPriceRange(decimal min , decimal max);
     List<ProductResponseDto> GetAllProductsItIsOnSale(bool itIsOnSale);
     List<ProductResponseDto> GetAllProductsByProductNameContains(string text);
+
+    ProductUpdateRequestDto GetByIdForUpdateRequest(int id);
 }

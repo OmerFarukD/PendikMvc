@@ -39,7 +39,9 @@ public class CategoriesController(ICategoryService _categoryService) : Controlle
     [HttpGet]
     public IActionResult Update(int id)
     {
-        return View();
+        var category = _categoryService.GetByIdForUpdateRequest(id);
+        
+        return View(category);
     }
 
     public IActionResult Update(CategoryUpdateRequestDto dto)

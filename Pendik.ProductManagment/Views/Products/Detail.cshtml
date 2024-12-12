@@ -1,0 +1,16 @@
+﻿@model ProductResponseDto
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><strong>Ürün Adı : </strong>@Model.Name</h5>
+        <h6 class="card-subtitle mb-2 text-muted"><strong>Ürünün Kategorisi :</strong>@Model.CategoryName</h6>
+        <p class="card-text"><strong>Ürünün Değeri :</strong>@Model.Price</p>
+        <p class="card-text"><strong>Ürünün Stok Adedi :</strong>@Model.Stock</p>
+        <p class="card-text"><strong>Ürün Satışta mı  :</strong>@(Model.IsOnSale ? "Satışta": "Satışta Değil")</p>
+
+    </div>
+</div>
+
+<a asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Id" class="card-link btn btn-outline-warning">Güncelle</a>
+<a href="#" class="card-link btn btn-outline-danger">Sil</a>
+<a asp-controller="Products" asp-action="Index" class="card-link btn btn-outline-info ">Anasayfaya Git</a>

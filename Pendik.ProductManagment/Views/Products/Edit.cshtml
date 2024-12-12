@@ -1,0 +1,39 @@
+﻿@model ProductUpdateRequestDto
+
+<form asp-action="Edit" asp-controller="Products" method="post">
+    
+      <div class="mb-3">
+            <label asp-for="Id" class="form-label">Ürün Id</label>
+            <input asp-for="Id" type="number" class="form-control" disabled>
+        </div>
+    
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Ürün Adı</label>
+        <input asp-for="Name" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Değeri</label>
+        <input asp-for="Price" type="number" class="form-control">
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="Stock" class="form-label">Stok Adedi</label>
+        <input asp-for="Stock" type="number" class="form-control">
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label">Kategori Id</label>
+        <vc:category-select-list></vc:category-select-list>
+    </div>
+
+    <div class="mb-3 form-check">
+        <input asp-for="IsOnSale" type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label asp-for="IsOnSale" class="form-check-label" for="exampleCheck1">Satışta mı</label>
+    </div>
+    <button type="submit" class="btn btn-outline-warning" style="margin-right: 5px">Güncelle</button>
+    <button type="reset" class="btn btn-outline-info" style="margin-right: 5px">Resetle</button>
+    <a asp-action="Index" asp-controller="Products" class="btn btn-outline-secondary">Ürünlere git</a>
+</form>

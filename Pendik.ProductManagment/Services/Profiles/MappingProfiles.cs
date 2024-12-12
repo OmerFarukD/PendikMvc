@@ -10,12 +10,13 @@ public class MappingProfiles : Profile
     public MappingProfiles()
     {
         CreateMap<CategoryAddRequestDto, Category>();
-        CreateMap<CategoryUpdateRequestDto, Category>();
+        CreateMap<CategoryUpdateRequestDto, Category>().ReverseMap();
         CreateMap<Category, CategoryResponseDto>();
 
 
         CreateMap<ProductAddRequestDto, Product>();
-        CreateMap<ProductUpdateRequestDto, Product>();
+        CreateMap<ProductUpdateRequestDto, Product>().ReverseMap();
+       // CreateMap<Product, ProductUpdateRequestDto>();
         CreateMap<Product, ProductResponseDto>();
     }
 }
