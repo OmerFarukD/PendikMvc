@@ -3,4 +3,5 @@
 <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories">
     
     <option selected disabled>Lütfen bir Kategori Seçiniz.</option>
+     <span asp-validation-for="CategoryId" class="text-danger"></span>
 </select>

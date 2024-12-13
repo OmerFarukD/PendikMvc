@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Pendik.ProductManagment.Models.Dtos.Categories;
 using Pendik.ProductManagment.Models.Dtos.Products;
 using Pendik.ProductManagment.Models.ViewModels;
 using Pendik.ProductManagment.Services.Abstracts;
@@ -31,6 +30,11 @@ public class ProductsController(IProductService _productService) : Controller
     [HttpPost]
     public IActionResult Create(ProductAddRequestDto dto)
     {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+        
         var response = _productService.Add(dto);
         return RedirectToAction("Index", "Products");
     }
