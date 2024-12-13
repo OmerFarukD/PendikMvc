@@ -2,18 +2,19 @@
 
 @if (Model.Price > 1000  && Model.Price<=5000)
 {
-    <td><span class="badge rounded-pill bg-success">@Model.Price</span></td>
+    <td><badge color="yellow" text="@Model.Price"></badge></td>
 }else if(Model.Price > 5000 && Model.Price<=10000)
 {
-    <td><span class="badge rounded-pill bg-primary">@Model.Price</span></td>
+    @*<td><span class="badge rounded-pill bg-primary">@Model.Price</span></td>*@
+    <td><badge color="blue" text="@Model.Price"></badge></td>
 }else if (Model.Price>10000 && Model.Price<=20000)
 {
-    <td><span class="badge rounded-pill bg-danger">@Model.Price</span></td>
+    <td><badge color="red" text="@Model.Price"></badge></td>
 }else if (Model.Price>20000)
 {
-    <td><span class="badge rounded-pill bg-info text-dark">@Model.Price</span></td>
+    <td><badge color="black" text="@Model.Price"></badge></td>
 }
 else
 {
-    <td><span class="badge rounded-pill bg-secondary">@Model.Price</span></td>
+    <td><badge color="white" text="@Model.Price"></badge></td>
 }

@@ -60,6 +60,10 @@ public class ProductsController(IProductService _productService) : Controller
     [HttpPost]
     public IActionResult Edit(ProductUpdateRequestDto dto)
     {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
         var response = _productService.Update(dto);
         return RedirectToAction("Index", "Products");
     }
